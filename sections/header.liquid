@@ -31,20 +31,136 @@
         <a href="#" class="inline-block bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">Cart</a>
       </div>
     </div>
+
+
+    <div id="skew-lines" class="my-11">
+      <ul role="list" class="mx-auto grid grid-cols-5 text-center gap-x-2 gap-y-2 sm:grid-cols-5">
+        <a class="bg-purple-300 skew-y-[8deg]" href="#">
+          <li class="my-2">
+            <div class="text-medium font-medium lg:text-xl">
+              <p class="text-black">Visit</p>
+            </div>
+          </li>
+        </a>
+        <a class="bg-amber-300 -skew-y-[8deg] hover:bg-black text-black hover:text-white" href="#">
+          <li class="my-2">
+            <div class="text-medium font-medium lg:text-xl">
+              <p class="">Join</p>
+            </div>
+          </li>
+        </a>
+        <a class="bg-blue-300 skew-y-[8deg]" href="#">
+          <li class="my-2">
+            <div class="text-medium font-medium lg:text-xl">
+              <p class="text-black">About</p>
+            </div>
+          </li>
+        </a>
+        <a class="bg-red-300 -skew-y-[8deg]" href="#">
+          <li class="my-2">
+            <div class="text-medium font-medium lg:text-xl">
+              <p class="text-black">Shop</p>
+            </div>
+          </li>
+        </a>
+        <a class="bg-green-300 skew-y-[8deg]" href="#">
+          <li class="my-2">
+            <div class="text-medium font-medium lg:text-xl">
+              <p class="text-black">Shows</p>
+            </div>
+          </li>
+        </a>
+      </ul>
+    </div>
     
-    <ul role="list" class="mx-auto grid grid-cols-2 text-center gap-x-2 gap-y-2 sm:grid-cols-4">
+    <div id="icon-lines" class="my-11">
+    <ul role="list" class="mx-auto grid grid-cols-5 text-black hover:text-white text-center gap-x-2 gap-y-2 sm:grid-cols-5">
+    {% for link in section.settings.menu.links %}
+      <a class="bg-purple-300 hover:bg-black" href="{{ link.url }}">
+        <li class="my-2">
+          <div class="text-medium font-medium lg:text-sm">
+            <img class="mx-auto h-6 w-6 rounded-full lg:w-8 lg:h-8" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=black" alt="">
+            <p class="">{{ link.title }}</p>
+          </div>
+        </li>
+      </a>
+      {% endfor %}
+<!--       
+      <a class="bg-amber-300" href="#">
+        <li class="my-2">
+          <div class="text-medium font-medium lg:text-sm">
+            <img class="mx-auto h-6 w-6 rounded-full lg:w-8 lg:h-8" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white" alt="">
+            <p class="text-white">Visit</p>
+          </div>
+        </li>
+      </a>
       <a href="#">
-      <li class="my-5">
-          <img class="mx-auto h-6 w-6 rounded-full lg:w-8 lg:h-8" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white" alt="">
-            <div class="text-medium font-medium lg:text-sm">
-              <p class="text-white">Visit</p>
+        <li class="my-2">
+          <div class="text-medium font-medium lg:text-sm">
+            <img class="mx-auto h-6 w-6 rounded-full lg:w-8 lg:h-8" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white" alt="">
+            <p class="text-white">Visit</p>
+          </div>
+        </li>
+      </a>
+      <a href="#">
+        <li class="my-2">
+          <div class="text-medium font-medium lg:text-sm">
+            <img class="mx-auto h-6 w-6 rounded-full lg:w-8 lg:h-8" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white" alt="">
+            <p class="text-white">Visit</p>
+          </div>
+        </li>
+      </a>
+      <a href="#">
+        <li class="my-2">
+          <div class="text-medium font-medium lg:text-sm">
+            <img class="mx-auto h-6 w-6 rounded-full lg:w-8 lg:h-8" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white" alt="">
+            <p class="text-white">Visit</p>
+          </div>
+        </li>
+      </a> -->
+      </ul>
+    </div>
+
+    <div id="overline">
+      <ul role="list" class="mx-auto uppercase font-mono grid grid-cols-5 text-left gap-x-2 gap-y-2 sm:grid-cols-6 pb-2">
+        <a href="#">
+          <li class="">
+                <div class="text-medium font-medium lg:text-xl">
+                  <p class="text-white pl-2 border-t-8 border-cyan-300 pt-2">Shows</p>
+              </div>
+          </li>
+        </a>
+        <a href="#">
+          <li class="">
+            <div class="text-medium font-medium lg:text-xl">
+              <p class="text-white pl-0 border-t-8 border-orange-300 pt-2">Staff</p>
           </div>
       </li>
-      </a>
+        </a>
+        <a href="#">
+          <li class="">
+            <div class="text-medium font-medium lg:text-xl">
+              <p class="text-white pl-2 border-t-8 border-red-300 pt-2">Join</p>
+          </div>
+      </li>
+        </a>
+        <a href="#">
+          <li class="">
+            <div class="text-medium font-medium lg:text-xl">
+              <p class="text-white pl-2 border-t-8 border-blue-300 pt-2">About</p>
+          </div>
+      </li>
+        </a>
+        <a href="#">
+          <li class="">
+            <div class="text-medium text-white font-medium lg:text-xl hover:bg-green-300 pb-4 hover:text-black">
+              <p class="pl-2 border-t-8 border-green-300 pt-2">Shop</p>
+          </div>
+      </li>
+        </a>
       </ul>
-
-
-      <ul role="list" class="mx-auto uppercase font-mono grid grid-cols-5 text-left gap-x-2 gap-y-2 sm:grid-cols-6 pb-6">
+    
+      <ul role="list" class="mmx-auto uppercase font-mono grid grid-cols-5 text-left gap-x-2 gap-y-2 sm:grid-cols-6 pb-6">
         <a href="#">
           <li class="">
                 <div class="text-medium font-medium lg:text-xl">
@@ -81,8 +197,89 @@
       </li>
         </a>
       </ul>
+    </div>
 
+    <div id="vertical-line" class="mt-11 ml-4 mb-0">
+      <ul class="grid grid-cols-6 gap-x-10 text-white font-mono uppercase">
+        <a class="" href="#">
+          <div class="">
+            <span class="border-4" href="#">
+                <li class="">
+                Visit
+                </li>
+              </span>
+          </div>
+        </a>
+        <a class="" href="#">
+          <div class="">
+            <span class="border-4" href="#">
+                <li class="">
+                Join
+                </li>
+              </span>
+          </div>
+        </a>
+        <a class="" href="#">
+          <div class="">
+            <span class="border-4" href="#">
+                <li class="">
+                Shop
+                </li>
+              </span>
+          </div>
+        </a>
+        <a class="" href="#">
+          <div class="">
+            <span class="border-4" href="#">
+                <li class="">
+                Exhibits
+                </li>
+              </span>
+          </div>
+        </a>
+        <a class="" href="#">
+          <div class="ml-8">
+            <span class="border-4" href="#">
+                <li class="">
+                About
+                </li>
+              </span>
+          </div>
+        </a>
+      </ul>
+    </div>
 
+    <div id="overline" class="mt-11 mb-0">
+      <ul role="list" class="mx-auto uppercase font-mono grid grid-cols-5 text-left gap-x-2 gap-y-2 sm:grid-cols-6 pb-2">
+        <a href="#">
+          <li class="">
+                <div class="text-medium font-medium lg:text-xl">
+                  <p class="text-white pl-0 pb-2 border-b-8 border-cyan-300 pt-2">Shows</p>
+              </div>
+          </li>
+        </a>
+        <a href="#">
+          <li class="">
+            <div class="text-medium font-medium lg:text-xl">
+              <p class="text-white pl-0 pb-2 border-b-8 border-t-8 border-orange-300 pt-2">Staff</p>
+          </div>
+      </li>
+        </a>
+        <a href="#">
+          <li class="">
+            <div class="text-medium font-medium lg:text-xl">
+              <p class="text-white pl-0 pb-2 border-b-8 border-red-300 pt-2">Join</p>
+          </div>
+      </li>
+        </a>
+        <a href="#">
+          <li class="">
+            <div class="text-medium font-medium lg:text-xl">
+              <p class="text-white pl-0 pb-2 border-b-8 border-blue-300 pt-2">About</p>
+          </div>
+      </li>
+        </a>
+      </ul>
 
   </nav>
 
